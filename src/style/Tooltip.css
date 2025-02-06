@@ -1,0 +1,47 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: max-content;
+    height: max-content;
+    max-width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 6px 10px;
+    
+    /* Posisi Tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 120%;  /* Digeser ke bawah */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* Efek Animasi */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Segitiga di bawah tooltip */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+    transform: translateX(-50%);
+}
