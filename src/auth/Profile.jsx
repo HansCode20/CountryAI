@@ -24,26 +24,22 @@ const Navbar = () => {
           CountryList
         </h1>
 
-        {/* Menu */}
-    
-
         {/* Profile & Logout */}
         <div className="hidden md:flex items-center space-x-4">
           {username && (
             <div className="flex items-center space-x-2">
               <img src={avatar} alt="Avatar" className="w-8 h-8 rounded-full" />
               <div className='tooltip p-2 bg-white rounded-full'>
-                Hey, {username}
+                {username}
                 <div className="tooltiptext bottom-0">{name}</div>
               </div>
             </div>
           )}
           <button
             onClick={handleLogout}
-            className="flex items-center gap-2 bg-white p-2 rounded shadow-md hover:shadow-lg transition duration-300 ease-in-out cursor-pointer"
+            className="flex items-center gap-2 p-2 bg-red-300 text-white rounded shadow-md hover:bg-red-500 transition duration-300 ease-in-out cursor-pointer"
           >
-             <img src="https://img.icons8.com/ios-filled/exit.png" alt="exit" className='w-5'/>
-             Logout
+              Logout
           </button>
         </div>
 
