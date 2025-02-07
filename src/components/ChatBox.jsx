@@ -70,7 +70,7 @@ function ChatBox() {
               </div>
             ))}
             {loading && 
-               <div className="animate-pulse w-fit bg-gray-200 p-2 rounded">
+               <div className="animate-pulse w-fit">
                   <p className="text-xs text-gray-500">Ai Is Typing...</p>
               </div>}
           </div>
